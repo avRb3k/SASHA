@@ -2,7 +2,7 @@
 ## Sebastian and Annas Superb Home Automation
 
 My goal was to create my own web application with which I can implement my home automation.
-I know it would be much easier and more stable to use something that already exists, but this way I could lern something new.
+I know it would be much easier and more stable to use something that already exists, but this way I could learn something new.
 
 Things I wanted to learn:
 
