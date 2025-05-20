@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S A S H A</title>
+        <link href="{{ url_for('static', path='/stylesheet.css') }}" rel="stylesheet">
+</head>
+<body>
+<h1>S A S H A</h1>
+<div id="zeit">Uhrzeit</div>
+<button id="control" onclick="window.location.href = '/knoepfe';" class="btn1" >Steuerung</button>
+<button id="control" onclick="window.location.href = '/wetter';" class="btn1" >Wetter</button>
+<button id="control" onclick="window.location.href = '/tanken';" class="btn1" >Tanken</button>
+<br>
+<pre>
+    Cube
+    |
+    ----noch {{volume}}, es sind {{verbraucht}} % verbraucht
+</pre>
+
+<progress id="progress_bar1" class="p_bar_body" value={{verbraucht}} max="100"></progress><div id="progr1"></div>
+<br>
+<label for="progress_bar1" class="bar_text">Verbrauch aktuell</label>
+<br>
+<progress id="progress_bar2" class="p_bar_body" value={{zeit}} max="100"></progress><div id="progr2"></div>
+<br>
+<label for="progress_bar2" class="bar_text">Restzeit, Differenz {{diff}}</label>
+
+
+<pre>
+    wetter
+    |
+    ----es sind {{temp}} Grad
+</pre>
+<pre>
+    tanken
+    |
+    ----diesel kostet {{diesel}} €
+</pre>
+<pre>
+    Kompliment für Anna
+    |
+    ----{{kompl_web}}
+</pre>
+
+
+<script>
+function getTime(){
+var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes();
+console.log(time);
+return time;
+}
+time = getTime();
+document.getElementById('zeit').textContent = `time `+ String(time);
+setInterval(function(){
+time = getTime();
+document.getElementById('zeit').textContent = `time `+ String(time);
+}, 10000);
+
+</script>
+</body>
+</html>

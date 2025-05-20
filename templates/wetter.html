@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S A S H A</title>
+    <link href="{{ url_for('static', path='/stylesheet.css') }}" rel="stylesheet">
+</head>
+    <body>
+<h1>W E T T E R</h1>
+    <button id="control" onclick="window.location.href = '/index';" class="btn1" >Startseite</button>
+    <button id="control" onclick="window.location.href = '/knoepfe';" class="btn1" >Steuerung</button>
+    {% for n in wetter %}
+    <pre>
+       {{n}}
+    </pre>
+    {% endfor %}
+
+<!--    <ul>-->
+<!--    {% for n in wetter %}-->
+<!--    <li>{{n}}</li>-->
+<!--    {% endfor %}-->
+<!--    </ul>-->
+    <br>
+    <br>
+    </body>
+</html>

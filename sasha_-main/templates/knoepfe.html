@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S A S H A</title>
+    <link href="{{ url_for('static', path='/test.css') }}" rel="stylesheet">
+</head>
+    <body>
+        <h1>STEUERUNG</h1>
+
+        <button id="control" onclick="window.location.href = '/index';" class="btn1" >Startseite</button>
+        <button id="control" onclick="window.location.href = '/wetter';" class="btn1" >Wetter</button>
+    <br>
+    <br>
+        <form method="post">
+            <input type="submit" name="action" value="Lampe an" class="btn" style={{bg_an}} >
+            <input type="submit" name="action" value="Lampe aus" class="btn" style={{bg_aus}}>
+        </form>
+        <br>
+        <br>
+        <form method="post">
+            <input type="submit" name="action" value="Dose an" class="btn">
+            <input type="submit" name="action" value="Dose aus" class="btn">
+        </form>
+        <br>
+        <br>
+        <form method="post">
+            <input type="submit" name="action" value="Scheune an" class="btn">
+            <input type="submit" name="action" value="Scheune aus" class="btn">
+        </form>
+        <br>
+        <br>
+        <form method="post">
+            <input type="submit" name="action" value="morning protocol" class="btn">
+            <input type="submit" name="action" value="alles an" class="btn">
+            <input type="submit" name="action" value="alles aus" class="btn">
+        </form>
+        <p>hö? {{check}}</p>
+        <br>
+        <br>
+    </body>
+</html>

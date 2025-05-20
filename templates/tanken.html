@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S A S H A</title>
+    <link href="{{ url_for('static', path='/stylesheet.css') }}" rel="stylesheet">
+</head>
+    <body>
+    <pre>
+ _____           _
+|_   _|         | |
+  | | __ _ _ __ | | _____ _ __
+  | |/ _` | '_ \| |/ / _ \ '_ \
+  | | (_| | | | |   <  __/ | | |
+  \_/\__,_|_| |_|_|\_\___|_| |_|
+    </pre>
+    <button id="control" onclick="window.location.href = '/index';" class="btn" >Startseite</button>
+    <button id="control" onclick="window.location.href = '/knoepfe';" class="btn" >Steuerung</button>
+    {% for n in Tanken %}
+    <pre>
+       {{n}}
+    </pre>
+    {% endfor %}
+
+<!--    <ul>-->
+<!--    {% for n in wetter %}-->
+<!--    <li>{{n}}</li>-->
+<!--    {% endfor %}-->
+<!--    </ul>-->
+    <br>
+    <br>
+    </body>
+</html>
